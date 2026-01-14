@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Auth;
 
 class AuthController extends Controller
 {
@@ -36,7 +37,11 @@ class AuthController extends Controller
             ]);
         }
 
-        return redirect('/dashboard');
+        // CRÉATION DE LA SESSION UTILISATEUR
+        Auth::loginUsingId($user->id);
+
+        // REDIRECTION VERS LE DASHBOARD
+        return redirect()->route('dashboard');
     }
 
     public function register()
@@ -53,7 +58,7 @@ class AuthController extends Controller
             'terms' => 'accepted'
         ]);
 
-        DB::table('users')->insert([
+        $id = DB::table('users')->insertGetId([
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
@@ -61,6 +66,15 @@ class AuthController extends Controller
             'updated_at' => now(),
         ]);
 
-        return redirect('/')->with('success', 'Compte créé avec succès');
+        
+        Auth::loginUsingId($id);
+
+        return redirect()->route('dashboard');
+    }
+
+    public function logout()
+    {
+        Auth::logout();
+        return redirect()->route('login');
     }
 }
