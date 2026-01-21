@@ -1,0 +1,122 @@
+.packs-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    background-color: #F5F6FA;
+    border-radius: 16px;
+    margin-top: 20px;
+    margin-left: -25px;
+}
+
+.pack-card {
+    width: 350px;
+    height: 848px;
+    background-color: #FFFFFF;
+    border-radius: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 30px;
+    font-family: 'Nunito Sans', sans-serif;
+    position: relative;
+}
+
+.pack-card.premium {
+    box-shadow: 0 20px 40px rgba(67, 97, 238, 0.25);
+}
+
+.pack-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.pack-header h3 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #202224;
+    margin-bottom: 8px;
+}
+
+.pack-type {
+    display: block;
+    font-size: 16px;
+    color: #413f3f;
+    font-weight: 200;
+    margin-bottom: 8px;
+}
+
+.pack-header {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 25px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #e1dfdf;
+}
+
+
+.pack-price {
+    font-size: 46px;
+    font-weight: 700;
+    color: #4880FF;
+}
+
+.pack-features {
+    list-style: none;
+    padding: 0 0 30px 0;   
+    margin: 0 0 30px 0;    
+    width: 100%;
+    flex-grow: 1;
+    border-bottom: 1px solid #e1dfdf; 
+}
+
+
+.pack-features li {
+    font-size: 18px;
+    color: #202224;
+    padding: 12px 0;
+    text-align: center;
+}
+
+.pack-features li.disabled {
+    color: #B5B5B5;
+}
+
+.pack-btn {
+    width: 200px;
+    height: 48px;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 30px;
+    transition: all 0.3s ease;
+}
+
+.pack-btn.outline {
+    background-color: transparent;
+    color: #4880FF;
+    border: 2px solid #4880FF;
+}
+
+.pack-btn.outline:hover {
+    background-color: #4880FF;
+    color: #FFFFFF;
+}
+
+.pack-btn.primary {
+    background-color: #4880FF;
+    color: #FFFFFF;
+    border: none;
+}
+
+.pack-btn.primary:hover {
+    background-color: #3A66E0;
+}
+
+
+@media (max-width: 1200px) {
+    .packs-container {
+        flex-wrap: wrap;
+    }
+}

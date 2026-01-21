@@ -71,18 +71,29 @@ body {
     background: #FFFFFF;
     display: flex;
     flex-direction: column;
+    padding: 0;
 }
 
 
 .header {
     display: flex;
+    flex-shrink: 0;
     justify-content: space-between;
     align-items: center;
     padding: 25px;
     background: #FFFFFF;
-    margin-top: -27px;
-    margin-left: -25px;
+    margin: 0;
 }
+
+
+.content {
+    flex: 1;
+    padding: 25px;
+    background: #F5F6FA;
+    margin:0px;
+    flex: 1;
+}
+
 
 .left-group {
     display: flex;
@@ -209,13 +220,6 @@ body {
 } 
 .chevron-btn:hover { 
     background-color: #E0E2E7; 
-}
-
-.content {
-    flex: 1;
-    padding: 25px;
-    background: #F5F6FA;
-    margin-top: -15px;
 }
 
 .cards {

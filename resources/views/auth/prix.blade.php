@@ -2,15 +2,13 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Dashboard</title>
+    <title>Prix</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@600;700&display=swap" rel="stylesheet">
 
     {{-- Liaison CSS et JS --}}
-    @vite(['resources/css/dashboard.css', 'resources/js/dashboard.js'])
-
-    {{-- Chart.js via CDN --}}
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    @vite(['resources/css/dashboard.css', 'resources/css/prix.css', 'resources/js/dashboard.js'])
+    
 </head>
 <body>
 
@@ -21,7 +19,7 @@
    </h3>
 
     <div class="menu">
-        <a href="#" class="active"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="20" height="20" class="icon">  <path d="M2.406 2.45C4.04.815 5.987 0 8.25 0c2.263 0 4.197.816 5.8 2.45 1.634 1.603 2.45 3.537 2.45 5.8s-.816 4.21-2.45 5.844c-1.603 1.604-3.537 2.406-5.8 2.406s-4.21-.802-5.844-2.406C.802 12.46 0 10.513 0 8.25c0-2.263.802-4.197 2.406-5.8Zm10.7.945c-1.347-1.347-2.965-2.02-4.856-2.02-1.89 0-3.51.673-4.855 2.02-1.347 1.346-2.02 2.964-2.02 4.855 0 1.89.673 3.51 2.02 4.855 1.346 1.347 2.964 2.02 4.855 2.02 1.89 0 3.51-.673 4.855-2.02 1.347-1.346 2.02-2.964 2.02-4.855 0-1.89-.673-3.51-2.02-4.855ZM7.733 2.277a.703.703 0 0 1 .516-.215c.2 0 .358.072.473.215a.572.572 0 0 1 .214.473c0 .2-.071.372-.214.516-.115.114-.272.171-.473.171a.8.8 0 0 1-.516-.171.8.8 0 0 1-.171-.516c0-.2.057-.358.171-.473ZM3.867 3.91a.657.657 0 0 1 .473-.215c.2 0 .372.072.515.215a.572.572 0 0 1 .215.473c0 .172-.071.33-.215.472a.703.703 0 0 1-.515.215.657.657 0 0 1-.473-.215.74.74 0 0 1-.172-.472c0-.2.058-.358.172-.473Zm7.778-.043.988.988-3.051 3.051c.029.115.043.23.043.344 0 .372-.143.702-.43.988a1.286 1.286 0 0 1-.945.387c-.372 0-.702-.129-.988-.387a1.434 1.434 0 0 1-.387-.988c0-.372.129-.688.387-.945.286-.287.616-.43.988-.43.115 0 .23.014.344.043l3.05-3.05Zm-9.41 3.91a.703.703 0 0 1 .515-.215c.2 0 .358.072.473.215a.572.572 0 0 1 .215.473c0 .2-.072.372-.215.516-.115.114-.272.171-.473.171a.8.8 0 0 1-.516-.171.8.8 0 0 1-.171-.516c0-.2.057-.358.171-.473Zm11 0a.703.703 0 0 1 .515-.215c.2 0 .358.072.473.215a.572.572 0 0 1 .214.473c0 .2-.071.372-.214.516-.115.114-.273.171-.473.171a.8.8 0 0 1-.516-.171.8.8 0 0 1-.171-.516c0-.2.057-.358.171-.473Zm-9.368 3.868a.657.657 0 0 1 .473-.215c.2 0 .372.071.515.215a.703.703 0 0 1 .215.515c0 .172-.071.33-.215.473a.8.8 0 0 1-.515.172.74.74 0 0 1-.473-.172.74.74 0 0 1-.172-.473.8.8 0 0 1 .172-.515Zm7.778 0a.657.657 0 0 1 .472-.215c.2 0 .358.071.473.215a.703.703 0 0 1 .215.515c0 .172-.072.33-.215.473-.115.114-.272.172-.473.172a.74.74 0 0 1-.473-.172.657.657 0 0 1-.214-.473c0-.2.071-.372.215-.515Z"/>
+        <a href="{{ route('dashboard') }}"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="20" height="20" class="icon">  <path d="M2.406 2.45C4.04.815 5.987 0 8.25 0c2.263 0 4.197.816 5.8 2.45 1.634 1.603 2.45 3.537 2.45 5.8s-.816 4.21-2.45 5.844c-1.603 1.604-3.537 2.406-5.8 2.406s-4.21-.802-5.844-2.406C.802 12.46 0 10.513 0 8.25c0-2.263.802-4.197 2.406-5.8Zm10.7.945c-1.347-1.347-2.965-2.02-4.856-2.02-1.89 0-3.51.673-4.855 2.02-1.347 1.346-2.02 2.964-2.02 4.855 0 1.89.673 3.51 2.02 4.855 1.346 1.347 2.964 2.02 4.855 2.02 1.89 0 3.51-.673 4.855-2.02 1.347-1.346 2.02-2.964 2.02-4.855 0-1.89-.673-3.51-2.02-4.855ZM7.733 2.277a.703.703 0 0 1 .516-.215c.2 0 .358.072.473.215a.572.572 0 0 1 .214.473c0 .2-.071.372-.214.516-.115.114-.272.171-.473.171a.8.8 0 0 1-.516-.171.8.8 0 0 1-.171-.516c0-.2.057-.358.171-.473ZM3.867 3.91a.657.657 0 0 1 .473-.215c.2 0 .372.072.515.215a.572.572 0 0 1 .215.473c0 .172-.071.33-.215.472a.703.703 0 0 1-.515.215.657.657 0 0 1-.473-.215.74.74 0 0 1-.172-.472c0-.2.058-.358.172-.473Zm7.778-.043.988.988-3.051 3.051c.029.115.043.23.043.344 0 .372-.143.702-.43.988a1.286 1.286 0 0 1-.945.387c-.372 0-.702-.129-.988-.387a1.434 1.434 0 0 1-.387-.988c0-.372.129-.688.387-.945.286-.287.616-.43.988-.43.115 0 .23.014.344.043l3.05-3.05Zm-9.41 3.91a.703.703 0 0 1 .515-.215c.2 0 .358.072.473.215a.572.572 0 0 1 .215.473c0 .2-.072.372-.215.516-.115.114-.272.171-.473.171a.8.8 0 0 1-.516-.171.8.8 0 0 1-.171-.516c0-.2.057-.358.171-.473Zm11 0a.703.703 0 0 1 .515-.215c.2 0 .358.072.473.215a.572.572 0 0 1 .214.473c0 .2-.071.372-.214.516-.115.114-.273.171-.473.171a.8.8 0 0 1-.516-.171.8.8 0 0 1-.171-.516c0-.2.057-.358.171-.473Zm-9.368 3.868a.657.657 0 0 1 .473-.215c.2 0 .372.071.515.215a.703.703 0 0 1 .215.515c0 .172-.071.33-.215.473a.8.8 0 0 1-.515.172.74.74 0 0 1-.473-.172.74.74 0 0 1-.172-.473.8.8 0 0 1 .172-.515Zm7.778 0a.657.657 0 0 1 .472-.215c.2 0 .358.071.473.215a.703.703 0 0 1 .215.515c0 .172-.072.33-.215.473-.115.114-.272.172-.473.172a.74.74 0 0 1-.473-.172.657.657 0 0 1-.214-.473c0-.2.071-.372.215-.515Z"/>
         </svg> Tableau de bord</a>
                 <a href="#"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="20" height="20" class="icon"><path d="M0 0h15.125v15.125H0V0Zm1.375 1.375v5.5h5.5v-5.5h-5.5Zm6.875 0v5.5h5.5v-5.5h-5.5ZM1.375 8.25v5.5h5.5v-5.5h-5.5Zm6.875 0v5.5h5.5v-5.5h-5.5Z"/>
             </svg> Éducation financière</a>
@@ -38,7 +36,7 @@
                 <hr style="margin:40px 0">
 
                 <h5 class="section-title">Autres pages</h5>
-                <a href="{{ route('prix') }}"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="20" height="20" class="icon" >
+                <a href="#"class="active"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="20" height="20" class="icon" >
             <path d="M5.5 0c.917 0 1.776.559 2.578 1.676 0 .028.057.129.172.3.115-.171.172-.272.172-.3C9.224.559 10.083 0 11 0c.573 0 1.06.2 1.46.602.402.4.602.888.602 1.46 0 .23-.042.459-.128.688H16.5v4.125h-.688v8.938H.688V6.874H0V2.75h3.566a1.946 1.946 0 0 1-.128-.688c0-.572.2-1.06.601-1.46A1.989 1.989 0 0 1 5.5 0Zm0 1.375c-.458 0-.688.23-.688.688 0 .458.23.687.688.687h1.59a.5.5 0 0 1-.086-.129l-.086-.172C6.402 1.733 5.93 1.375 5.5 1.375Zm5.5 0c-.43 0-.902.358-1.418 1.074a.5.5 0 0 1-.086.13l-.043.085c0 .029-.014.057-.043.086H11c.458 0 .688-.23.688-.688 0-.458-.23-.687-.688-.687Zm-9.625 2.75V5.5h6.188v-.688h1.375V5.5h6.187V4.125H1.375Zm.688 2.75v7.563h5.5V7.561h1.375v6.875h5.5V6.875H2.062Z"/>
         </svg>  Prix des packs</a>
                 <a href="#"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="20" height="20" class="icon">
@@ -148,173 +146,53 @@
     </div>
     
     <div class="content">
-        <h2>Tableau de bord</h2>
+        <h2>Prix des packs</h2>
+  <div class="packs-container">
 
-        <div class="cards">
-            <div class="card">
-                <div class="card-top">
-                    <div>
-                        <h4>Utilisateurs Total</h4>
-                        <strong>40,689</strong>
-                        <div class="card-trend up">
-                            <span class="trend-icon"><x-icons.up class="trend-icon-svg" /></span>
-                            <span>8.5% </span>
-                            <span class="trend-label">Au dessus d'hier</span>
-                        </div>
-                    </div>
-                    <div class="card-icon bg-purple">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none">
-        <path 
-            fill="#8280FF" 
-            d="M23.999 6.667a4 4 0 1 1 0 8 4 4 0 0 1 0-8ZM11.999 0a5.334 5.334 0 1 1 0 10.668A5.334 5.334 0 0 1 12 0Z" 
-            opacity="0.588"
-                />
-            <path 
-                fill="#8280FF" 
-                d="M11.977 13.333c6.384 0 11.63 3.058 12.02 9.6.016.26 0 1.067-1.002 1.067H.97C.635 24-.027 23.28 0 22.932c.517-6.363 5.682-9.598 11.976-9.599Zm11.492 2.67c4.541.05 8.25 2.344 8.529 7.197.011.195 0 .8-.724.8h-5.14c0-3-.992-5.77-2.665-7.998Z" 
-            />
-        </svg> 
-                            </div>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-top">
-                    <div>
-                        <h4>Commande Totale</h4>
-                        <strong>10,293</strong>
-                        <div class="card-trend up">
-                            <span class="trend-icon"><x-icons.up class="trend-icon-svg" /></span>
-                            <span>1.3%</span>
-                            <span class="trend-label">Au dessus weekend P.</span>
-                        </div>
-                    </div>
-                    <div class="card-icon bg-yellow">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none">
-            <path 
-                fill="#FEC53D" 
-                fill-rule="evenodd" 
-                d="m0 11.316 12.9 7.449c.14.08.285.138.433.174v14.446L.92 26.039A1.875 1.875 0 0 1 0 24.424V11.316Zm30-.198v13.307c0 .662-.35 1.276-.92 1.613l-12.413 7.347V18.813l.09-.048L30 11.118Z" 
-                clip-rule="evenodd"
-            />
-            <path 
-                fill="#FEC53D" 
-                fill-rule="evenodd" 
-                d="M.404 7.701c.158-.199.357-.367.589-.49L14.118.22a1.875 1.875 0 0 1 1.762 0l13.126 6.99c.178.095.337.217.473.359l-14.39 8.308a1.681 1.681 0 0 0-.261.186 1.681 1.681 0 0 0-.262-.186L.404 7.7Z" 
-                clip-rule="evenodd" 
-                opacity="0.499"
-            />
-        </svg>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-top">
-                    <div>
-                        <h4>Vente Totale</h4>
-                        <strong>89,000</strong>
-                        <div class="card-trend down">
-                            <span class="trend-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"  class="trend-icon-svg">
-            <path 
-                fill="#F93C65" 
-                d="m16 18 2.29-2.29-4.88-4.88-4 4L2 7.41 3.41 6l6 6 4-4 6.3 6.29L22 12v6h-6Z" 
-            />
-        </svg></span>
-                            <span>4.3%</span>
-                            <span class="trend-label">En dessous d'hier</span>
-                        </div>
-                    </div>
-                    <div class="card-icon bg-green">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none">
-            <path 
-                fill="#4AD991" 
-                d="M3.111 24.889h23.333a1.555 1.555 0 1 1 0 3.111H1.556C.696 28 0 27.304 0 26.444V1.556a1.556 1.556 0 1 1 3.111 0v23.333Z" 
-            />
-            <path 
-                fill="#4AD991" 
-                d="M8.913 18.175a1.556 1.556 0 0 1-2.27-2.128l5.834-6.222a1.556 1.556 0 0 1 2.144-.12l4.604 3.93 5.999-7.599a1.556 1.556 0 1 1 2.442 1.928l-7 8.866a1.556 1.556 0 0 1-2.23.22l-4.705-4.014-4.818 5.139Z" 
-                opacity="0.5" 
-            />
-        </svg>
-            </div>
-            </div>
-            </div>
-
-            <div class="card">
-                <div class="card-top">
-                    <div>
-                        <h4>Total en attente</h4>
-                        <strong>2,040</strong>
-                        <div class="card-trend up">
-                            <span class="trend-icon"><x-icons.up class="trend-icon-svg" /></span>
-                            <span>1.8%</span>
-                            <span class="trend-label"> Au dessus d'hier</span>
-                        </div>
-                    </div>
-                    <div class="card-icon bg-orange">
-                       <svg xmlns="http://www.w3.org/2000/svg" fill="none">
-            <path 
-                fill="#FF9066" 
-                fill-rule="evenodd" 
-                d="M12.632 9.003a.5.5 0 0 1 .498-.461h.418a.5.5 0 0 1 .498.45l.621 6.216 4.415 2.523a.5.5 0 0 1 .252.434v.389a.5.5 0 0 1-.631.482l-6.304-1.719a.5.5 0 0 1-.367-.52l.6-7.794Z" 
-                clip-rule="evenodd" 
-                opacity="0.78"
-            />
-            <path 
-                fill="#FF9066" 
-                d="M5.853.385a.5.5 0 0 1 .869-.206L8.52 2.323A13.953 13.953 0 0 1 14 1.208c7.732 0 14 6.268 14 14s-6.268 14-14 14-14-6.268-14-14c0-1.313.18-2.584.519-3.79l2.567.722a11.345 11.345 0 0 0-.419 3.068c0 6.26 5.074 11.334 11.333 11.334 6.26 0 11.333-5.075 11.333-11.334 0-6.26-5.074-11.333-11.333-11.333-1.268 0-2.503.208-3.668.606l1.8 2.147a.5.5 0 0 1-.354.82l-7.045.4a.5.5 0 0 1-.514-.616L5.853.385Z" 
-                opacity="0.901"
-            />
-        </svg>
-                    </div>
-                </div>
-            </div>
+    <div class="pack-card">
+        <div class="pack-header">
+            <h3>Basic</h3>
+            <span class="pack-type">Pack mensuel</span>
+            <div class="pack-price">2 000 XOF</div>
         </div>
+        <ul class="pack-features">
+            <li>Rapport limité</li>
+            <li>Portefeuille limité</li>
+            <li>Voix limitée</li>
+            <li class="disabled">Budget limité</li>
+            <li class="disabled">Objectif limité</li>
+            <li class="disabled">Éducation financière</li>
+            <li class="disabled">Transfert sous portefeuille</li>
+        </ul>
 
-        <div class="graph">
-            <div class="graph-inner">
-                <div class="graph-header">
-                    <h3 class="graph-title">Détails des ventes</h3>
-                    <select class="month-select" id="monthSelect"></select>
-                </div>
-                <div class="graph-body">
-                    <canvas id="salesChart"></canvas>
-                </div>
-            </div>
-        </div>
-
-        <div class="table-card">
-            <div class="table-header">
-                <h3 class="table-title">Détails des ventes</h3>
-                <select class="month-select" id="monthSelectGraph"></select>
-            </div>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Nom du pack</th>
-                        <th>Pays</th>
-                        <th>Date</th>
-                        <th>Période</th>
-                        <th>Prix</th>
-                        <th>Statut</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Kouma Premium</td>
-                        <td>Burkina Faso</td>
-                        <td>12.10.2025 - 13:53</td>
-                        <td>Mensuel</td>
-                        <td>3 000 XOF</td>
-                        <td><span class="badge">Actif</span></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+        <button class="pack-btn outline">Souscrire</button>
     </div>
+
+    <div class="pack-card">
+        <div class="pack-header">
+            <h3>Standard</h3>
+            <span class="pack-type">Pack mensuel</span>
+            <div class="pack-price">3 000 XOF</div>
+        </div>
+        <ul class="pack-features"></ul>
+    <button class="pack-btn outline">Souscrire</button>
+    </div>
+
+    <div class="pack-card premium">
+        <div class="pack-header">
+            <h3>Premium</h3>
+            <span class="pack-type">Pack annuel</span>
+            <div class="pack-price">60 000 XOF</div>
+        </div>
+        <ul class="pack-features"></ul>
+    <button class="pack-btn primary">Souscrire</button>
+    </div>
+
+</div>
+
+
+</div>
 
 </div>
 </body>
 </html>
-
