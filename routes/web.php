@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\TransactionController;
 
 Route::get('/', [AuthController::class, 'login'])->name('login');
 Route::post('/login', [AuthController::class, 'loginPost']);
@@ -15,6 +16,11 @@ Route::middleware('auth')->group(function () {
 
 Route::get('/prix', function () { 
     return view('auth.prix'); })->name('prix');
+
+Route::get('/transactions', [TransactionController::class, 'index'])->name('transactions');
 });
+
+
+
 
 
