@@ -24,8 +24,12 @@
             <div class="error">{{ $message }}</div>
         @enderror
 
+        <div class="password-label">
         <label>Mot de passe</label>
+         <a href="#" class="forgot-password">Mot de passe oublié?</a>
+        </div>
         <input type="password" name="password">
+       
         @error('password')
             <div class="error">{{ $message }}</div>
         @enderror

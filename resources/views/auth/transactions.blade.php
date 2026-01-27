@@ -50,7 +50,7 @@
         <table>
             <thead>
                 <tr>
-                    <th></th>
+                    <td><input type="checkbox"></td>
                     <th>Nom du compte</th>
                     <th>Facture</th>
                     <th>Type de paiement</th>
@@ -193,12 +193,13 @@
 
 
 <div class="transaction-overlay" id="transactionOverlay">
-    <div class="transaction-details" id="transactionDetails">
+    <div class="transaction-panel">
+    <div class="transaction-header">
+        <h3>Détails de transaction</h3>
         <button class="close-details" id="closeDetails">&times;</button>
-
-<h3>Détails de transaction</h3>
-
-<div class="details-section">
+    </div>
+<div class="transaction-details">
+    <div class="details-section">
     <h4>Expéditeur</h4>
     <div class="detail-row"><span>Payeur</span><strong id="detailSender">Jhon Smith</strong></div>
     <div class="detail-row"><span>Code Payeur</span><strong>1243 4569 8541 7415</strong></div>
@@ -238,8 +239,6 @@
         Enregistrer
     </button>
 </div>
-
-
-
+</div>
 
 @endsection

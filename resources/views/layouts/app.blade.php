@@ -32,7 +32,8 @@
 
         <div class="menu">
         <div class="menu-title">MENU PRINCIPAL</div>
-           <a href="#" class=""> <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" > <path stroke="currentColor" stroke-width="1.5" d="M18.333 10a8.333 8.333 0 1 0-16.667 0 8.333 8.333 0 0 0 16.667 0Z" /> <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m10.333 6.915 2.433-.811c.739-.246 1.108-.37 1.303-.174.195.195.072.564-.174 1.302l-.811 2.434c-.42 1.258-.63 1.887-1.08 2.339-.452.45-1.081.66-2.34 1.08l-2.433.811c-.739.246-1.108.37-1.303.174-.195-.194-.072-.564.175-1.302l.81-2.434c.42-1.258.63-1.887 1.081-2.338.451-.452 1.08-.661 2.34-1.081Z" /> <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m10 10-.005.005" />
+           <a href="{{ route('tableau') }}"
+   class="{{ request()->routeIs('tableau') ? 'active' : '' }}"> <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" > <path stroke="currentColor" stroke-width="1.5" d="M18.333 10a8.333 8.333 0 1 0-16.667 0 8.333 8.333 0 0 0 16.667 0Z" /> <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m10.333 6.915 2.433-.811c.739-.246 1.108-.37 1.303-.174.195.195.072.564-.174 1.302l-.811 2.434c-.42 1.258-.63 1.887-1.08 2.339-.452.45-1.081.66-2.34 1.08l-2.433.811c-.739.246-1.108.37-1.303.174-.195-.194-.072-.564.175-1.302l.81-2.434c.42-1.258.63-1.887 1.081-2.338.451-.452 1.08-.661 2.34-1.081Z" /> <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m10 10-.005.005" />
          </svg> Vue d’ensemble </a>
         <a href="#">
   <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" 
@@ -82,7 +83,8 @@
       d="M11.336 8.101c-.293-.307-1.011-1.03-2.146-.517-1.134.513-1.314 2.164.402 2.34.775.079 1.28-.092 1.744.392.463.485.549 1.832-.635 2.195-1.183.363-1.95-.237-2.156-.424m1.377-5.404v.66m0 5.28v.727"/>
     </svg>Transactions</a>
 
-            <a href="#">
+        <a href="{{ route('client') }}"
+   class="{{ request()->routeIs('client') ? 'active' : '' }}">
   <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" 
        width="20" height="20" viewBox="0 0 20 20" fill="none">
     <path
@@ -112,7 +114,7 @@
     />
   </svg>Clients</a>
 
-            <a href="#">
+    <a href="#">
   <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" 
        width="20" height="20" viewBox="0 0 20 20" fill="none">
     <path
@@ -351,7 +353,6 @@
             @yield('content')
         </div>
     </div>
-
     @stack('scripts')
 </body>
 </html>

@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const overlay = document.getElementById("transactionOverlay");
     const closeBtn = document.getElementById("closeDetails");
+    const saveBtn = document.getElementById("saveTransaction");
     const rows = document.querySelectorAll(".transactions-table tbody tr");
     
 
@@ -12,11 +13,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     rows.forEach(row => {
         row.addEventListener("click", (event) => {
-
-    
             if (event.target.closest("button, input")) return;
 
             overlay.classList.add("active");
+            document.body.classList.add("overlay-open"); 
 
             const name = row.querySelector(".user-info strong");
             const email = row.querySelector(".user-info small");
@@ -32,11 +32,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
     closeBtn.addEventListener("click", () => {
         overlay.classList.remove("active");
+        document.body.classList.remove("overlay-open"); 
+    });
+
+    saveBtn.addEventListener("click", () => {
+        overlay.classList.remove("active");
+        document.body.classList.remove("overlay-open");
+        console.log("Transaction enregistrée !");
     });
 
     overlay.addEventListener("click", (e) => {
         if (e.target === overlay) {
             overlay.classList.remove("active");
+            document.body.classList.remove("overlay-open"); 
         }
     });
 

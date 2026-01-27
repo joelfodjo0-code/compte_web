@@ -37,6 +37,7 @@
     border-radius: 8px;
     cursor: pointer;
     font-size: 14px;
+    color: #888E9E;
 }
 
 .btn-outline:hover { 
@@ -231,4 +232,6 @@ tbody tr {
     gap: 2px;
     font-size: 14px; 
 } 
+
+
 

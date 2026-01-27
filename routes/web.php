@@ -3,6 +3,8 @@
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\TransactionController;
+use App\Http\Controllers\ClientController;
+use App\Http\Controllers\TableauController;
 
 Route::get('/', [AuthController::class, 'login'])->name('login');
 Route::post('/login', [AuthController::class, 'loginPost']);
@@ -18,6 +20,12 @@ Route::get('/prix', function () {
     return view('auth.prix'); })->name('prix');
 
 Route::get('/transactions', [TransactionController::class, 'index'])->name('transactions');
+
+Route::get('/client', [ClientController::class, 'index'])->name('client');
+
+
+Route::get('/tableau', [TableauController::class, 'index'])->name('tableau');
+
 });
 
 

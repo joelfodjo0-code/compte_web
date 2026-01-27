@@ -41,6 +41,28 @@ label {
     color: #202224;
 }
 
+.password-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.password-label label {
+    margin: 0;
+}
+
+.forgot-password {
+    font-size: 13px;
+    color: #666;
+    text-decoration: underline; 
+    transition: all 0.2s ease;
+}
+
+.forgot-password:hover {
+    color: #333;
+    font-size: 14px;
+}
+
 input[type="email"],
 input[type="password"] {
     padding: 10px;
