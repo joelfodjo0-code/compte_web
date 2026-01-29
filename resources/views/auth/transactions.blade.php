@@ -138,7 +138,7 @@
     <td>KMF_97652976</td>
     <td>Virement</td>
     <td>Septembre 14, 2026</td>
-    <td class="amount failed">8,900 XOF</td>
+    <td class="amount success">8,900 XOF</td>
     <td><span class="status success">Succès</span></td>
     <td class="actions">
     <button class="btn-action delete"><x-icons.icon-delete /></button>

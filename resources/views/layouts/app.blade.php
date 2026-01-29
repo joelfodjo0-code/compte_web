@@ -7,6 +7,7 @@
     @stack('styles')
 </head>
 <body>
+    <div class="app-container">
     <div class="sidebar">
         <h3>
             <img src="{{ asset('images/Frame.jpg') }}" alt="Logo Koum'a FIN" class="logo">
@@ -257,7 +258,7 @@
     <circle cx="13.75" cy="7.917" r="1.25" stroke="currentColor" stroke-width="1.5" />
   </svg> Personnalisation</a>
 
-        </div>
+    </div>
     </div>
 
     <div class="main">
@@ -352,6 +353,7 @@
         <div class="content">
             @yield('content')
         </div>
+    </div>
     </div>
     @stack('scripts')
 </body>
