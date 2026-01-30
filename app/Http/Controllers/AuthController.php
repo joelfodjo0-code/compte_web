@@ -41,7 +41,7 @@ class AuthController extends Controller
         Auth::loginUsingId($user->id);
 
         // REDIRECTION VERS LE DASHBOARD
-        return redirect()->route('dashboard');
+        return redirect()->route('tableau');
     }
 
     public function register()

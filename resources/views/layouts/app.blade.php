@@ -36,7 +36,8 @@
            <a href="{{ route('tableau') }}"
    class="{{ request()->routeIs('tableau') ? 'active' : '' }}"> <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" > <path stroke="currentColor" stroke-width="1.5" d="M18.333 10a8.333 8.333 0 1 0-16.667 0 8.333 8.333 0 0 0 16.667 0Z" /> <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m10.333 6.915 2.433-.811c.739-.246 1.108-.37 1.303-.174.195.195.072.564-.174 1.302l-.811 2.434c-.42 1.258-.63 1.887-1.08 2.339-.452.45-1.081.66-2.34 1.08l-2.433.811c-.739.246-1.108.37-1.303.174-.195-.194-.072-.564.175-1.302l.81-2.434c.42-1.258.63-1.887 1.081-2.338.451-.452 1.08-.661 2.34-1.081Z" /> <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m10 10-.005.005" />
          </svg> Vue d’ensemble </a>
-        <a href="#">
+        <a href="{{ route('solde') }}"
+   class="{{ request()->routeIs('solde') ? 'active' : '' }}">
   <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" 
        width="20" height="20" viewBox="0 0 20 20" fill="none">
     <path

@@ -9,7 +9,7 @@
 <div class="overview-header">
     <h2>Vue d'ensemble</h2>
     <div class="header-filters">
-        <span class="filter-item text-muted-blue">
+    <span class="filter-item text-muted-blue">
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14" width="14" height="14">
         <g clip-path="url(#a)">
             <circle cx="7" cy="7" r="6" fill="#fff"/>
@@ -22,9 +22,9 @@
         </defs>
     </svg>
     Période choisie
-</span>
+    </span>
 
-        <span class="filter-item text-muted-blue">
+    <span class="filter-item text-muted-blue">
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14" width="14" height="14">
         <g clip-path="url(#a)">
             <circle cx="7" cy="7" r="6" fill="#fff"/>
@@ -37,7 +37,7 @@
         </defs>
     </svg>
     Dernière période
-</span>
+    </span>
 
         <select class="filter-select text-muted-blue">
             <option>Jour</option>
@@ -52,8 +52,8 @@
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
         <path stroke="#888E9E" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"/>
     </svg>
-</span>
-        <span class="filter-icon filter-icon-svg">
+    </span>
+        <span class="filter-icon">
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16">
         <path
             stroke="#888E9E"
@@ -63,7 +63,7 @@
             d="M5.631 8.672C3.558 7.122 2.08 5.416 1.273 4.457c-.25-.297-.332-.514-.381-.896-.169-1.31-.253-1.965.131-2.388C1.407.75 2.087.75 3.445.75h9.61c1.358 0 2.038 0 2.422.423.384.423.3 1.078.131 2.388-.05.382-.131.6-.38.896-.809.96-2.29 2.669-4.367 4.22a.875.875 0 0 0-.335.624c-.206 2.276-.396 3.522-.514 4.152-.191 1.018-1.634 1.63-2.407 2.177-.46.325-1.018-.062-1.078-.565-.113-.96-.327-2.91-.56-5.764a.874.874 0 0 0-.336-.63Z"
         />
     </svg>
-</span>
+   </span>
     </div>
 </div>
 
@@ -73,6 +73,7 @@
         <div class="top-cards-vertical">
             <div class="card card-revenue">
                 <div class="card-title">
+                <div class="card-title-left">
     <svg class="card-icon-svg" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16">
         <path
             stroke="#555F75"
@@ -93,42 +94,77 @@
         />
     </svg>
     Revenue
-</div>
+    <span class="percentage-value">
+                    
+                    <svg class="percentage-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 12 12">
+                        <path
+                            stroke="#29896E"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="1.2"
+                            d="M3.01 7.83 3 3l4.83.01M3 3l6 6"
+                        />
+                    </svg>
+                    160%
+    </span>
+    </div>
+             <x-icons.bank/>
+    </div>
+
                 <div class="card-value">86,044 <span class="text-muted-blue">XOF</span></div>
                 <div class="card-sub text-muted-blue">Depuis 40 000 XOF</div>
             </div>
             <hr class="separator">
             <div class="card">
-                <div class="card-title">
-      <Svg class="card-icon-svg" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16">
-    <Path
-      stroke="#555F75"
-      strokeLinecap="round"
-      strokeWidth={1.2}
-      d="M9.334 1.467a6.667 6.667 0 1 0 5.2 5.2"
+           <div class="card-title">
+      <div class="card-title-left">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" 
+     viewBox="0 0 16 16" width="16" height="16">
+    <path
+        stroke="#555F75"
+        stroke-linecap="round"
+        stroke-width="1.2"
+        d="M9.334 1.467a6.667 6.667 0 1 0 5.2 5.2"
     />
-    <Path
-      stroke="#555F75"
-      strokeLinecap="round"
-      strokeWidth={1.2}
-      d="M8 6c-.737 0-1.334.448-1.334 1s.597 1 1.333 1c.737 0 1.334.448 1.334 1s-.597 1-1.334 1m0-4c.58 0 1.075.278 1.258.667M7.999 6v-.667M8 10c-.58 0-1.074-.278-1.257-.667M7.999 10v.667"
+    <path
+        stroke="#555F75"
+        stroke-linecap="round"
+        stroke-width="1.2"
+        d="M8 6c-.737 0-1.334.448-1.334 1s.597 1 1.333 1c.737 0 1.334.448 1.334 1s-.597 1-1.334 1m0-4c.58 0 1.075.278 1.258.667M7.999 6v-.667M8 10c-.58 0-1.074-.278-1.257-.667M7.999 10v.667"
     />
-    <Path
-      stroke="#555F75"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      strokeWidth={1.2}
-      d="m11.333 4.668 2.784-2.786m.549 2.438-.079-2.06c0-.487-.29-.79-.818-.827l-2.083-.098"
+    <path
+        stroke="#555F75"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="1.2"
+        d="m11.333 4.668 2.784-2.786m.549 2.438-.079-2.06c0-.487-.29-.79-.818-.827l-2.083-.098"
     />
-  </Svg>
-    Transactions
-</div>
+    </svg>
+
+        Transactions
+        <span class="percentage-value">
+            <svg class="percentage-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 12 12">
+                <path
+                    stroke="#29896E"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.2"
+                    d="M3.01 7.83 3 3l4.83.01M3 3l6 6"
+                />
+            </svg>
+            160%
+        </span>
+        </div>
+       <x-icons.bank/>
+    
+    </div>
 
                 <div class="card-value">132</div>
                 <div class="card-sub text-muted-blue">Depuis 8 mois</div>
             </div>
             <div class="card">
                 <div class="card-title">
+                    <div class="card-title-left">
     <svg class="card-icon-svg" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16" width="16" height="16">
         <path
             d="m3.054 5.738-1.72-.102C2.567 2.47 6.106.666 9.556 1.563c3.675.955 5.858 4.611 4.876 8.167-.813 2.94-3.536 4.89-6.533 4.937"
@@ -154,6 +190,20 @@
         />
     </svg>
     Transactions moye...
+    <span class="percentage-value-down">
+    <svg class="percentage-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 12 12">
+        <path
+            stroke="#B58330"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="1.2"
+            d="M8.99 4.17 9 9l-4.83-.01M9 9 3 3"
+        />
+    </svg>
+    60%
+    </span>
+    </div>
+    <x-icons.bank/>
 </div>
 
                 <div class="card-value">90 000 <span class="text-muted-blue">XOF</span></div>
@@ -219,9 +269,9 @@
       strokeWidth={1.5}
       d="M14.5 2.5V4m-9-1.5V4M2.875 10.182c0-3.268 0-4.902.94-5.917.938-1.015 2.45-1.015 5.473-1.015h1.425c3.022 0 4.534 0 5.473 1.015.939 1.015.939 2.65.939 5.917v.386c0 3.268 0 4.902-.94 5.917-.938 1.015-2.45 1.015-5.472 1.015H9.287c-3.023 0-4.535 0-5.474-1.015-.939-1.015-.939-2.65-.939-5.917v-.386ZM3.25 7h13.5"
     />
-  </Svg>
-  Juin 09 – Juil 16 2024
-</span>
+    </Svg>
+     Juin 09 – Juil 16 2024
+    </span>
                         <span class="header-action">Horaire</span>
                        <span class="header-action">
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20" width="20" height="20">
@@ -236,7 +286,7 @@
         />
     </svg>
     Modifier le graphique
-</span>
+    </span>
                     </div>
                 </div>
                 <div class="stats">
