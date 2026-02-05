@@ -2,12 +2,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const overlay = document.getElementById('clientOverlay');
     const closeBtn = document.getElementById('closeOverlay');
     const cancelBtn = document.getElementById('cancelOverlay');
+    const addClientBtn = document.querySelector('.header-actions .btn-primary'); 
+    
 
-    document.querySelectorAll('.transactions-table tbody tr').forEach(row => {
-        row.addEventListener('click', () => {
-            overlay.classList.add('active');
-            document.body.style.overflow = 'hidden';
-        });
+    addClientBtn.addEventListener('click', () => {
+        overlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
     });
 
     const closeOverlay = () => {

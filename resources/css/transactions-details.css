@@ -1,8 +1,7 @@
 .transaction-overlay {
     position: fixed;
     inset: 0;
-    background: rgba(15, 15, 16, 0.35);
-    backdrop-filter: blur(6px);
+    background: rgba(0,0,0,0.35);
     z-index: 999;
     opacity: 0;
     pointer-events: none;

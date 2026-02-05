@@ -192,9 +192,7 @@
                 <h3>Ajouter client</h3>
                 <button class="overlay-close" id="closeOverlay">&times;</button>
             </div>
-
         <div class="overlay-card">
-
             <form>
                 <h4>Information du compte</h4>
 
@@ -279,7 +277,6 @@
                         <input type="text" placeholder="N° de taxe">
                     </div>
                 </div>
-
                 <div class="overlay-actions">
                     <button type="button" class="btn-cancel" id="cancelOverlay">
                         Annuler
