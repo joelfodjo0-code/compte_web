@@ -241,6 +241,7 @@
 
 
 /* Overlay "Ajouter un produit" */
+/* Overlay "Ajouter un produit" */
 .overlay-product {
     position: fixed;
     inset: 0;
@@ -293,10 +294,12 @@
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 .overlay-product-body {
     padding: 24px 28px;
+    padding-bottom: 80px; /* Espace pour les boutons fixes */
     overflow-y: auto;
     flex: 1;
 }
@@ -526,11 +529,16 @@
 }
 
 .overlay-product-actions {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
     display: flex;
     justify-content: space-between;
     gap: 12px;
     padding: 20px 28px;
     background: #fff;
+    z-index: 10;
 }
 
 .overlay-product-actions .btn-cancel,

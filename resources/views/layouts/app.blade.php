@@ -135,7 +135,8 @@
     />
   </svg>Catalogue</a>
 
-           <a href="#">
+           <a href="{{ route('rapport') }}"
+   class="{{ request()->routeIs('rapport') ? 'active' : '' }}">
   <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" 
        width="20" height="20" viewBox="0 0 20 20" fill="none">
     <path
@@ -168,7 +169,8 @@
     />
   </svg>Paiements</a>
 
-            <a href="#">
+            <a href="{{ route('facture') }}"
+   class="{{ request()->routeIs('facture') ? 'active' : '' }}">
   <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" 
        width="20" height="20" viewBox="0 0 20 20" fill="none">
     <path
@@ -178,11 +180,12 @@
       stroke-width="1.5"
       d="M3.334 15.538V6.712c0-2.378 0-3.568.732-4.306.732-.74 1.911-.74 4.268-.74h3.333c2.357 0 3.536 0 4.268.74.732.738.732 1.928.732 4.306v8.826c0 1.26 0 1.89-.385 2.138-.629.405-1.601-.445-2.09-.753-.405-.255-.607-.383-.83-.39-.243-.008-.449.114-.886.39l-1.592 1.004c-.43.27-.644.406-.883.406-.24 0-.454-.135-.884-.406l-1.592-1.004c-.404-.255-.606-.383-.83-.39-.243-.008-.449.114-.885.39-.49.308-1.462 1.158-2.091.753-.385-.248-.385-.878-.385-2.138ZM9.166 9.167h-2.5M11.666 5.833h-5"
     />
-  </svg>Factures</a>
+  </svg>Facture</a>
 
             
         <div class="menu-title">Autres</div>
-            <a href="#">
+            <a href="{{ route('developpeur') }}"
+   class="{{ request()->routeIs('developpeur') ? 'active' : '' }}">
   <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" 
        width="20" height="20" viewBox="0 0 20 20" fill="none">
     <path

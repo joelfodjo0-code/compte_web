@@ -7,6 +7,9 @@ use App\Http\Controllers\ClientController;
 use App\Http\Controllers\TableauController;
 use App\Http\Controllers\SoldeController;
 use App\Http\Controllers\CatalogueController;
+use App\Http\Controllers\RapportController;
+use App\Http\Controllers\DeveloppeurController;
+use App\Http\Controllers\FactureController;
 
 Route::get('/', [AuthController::class, 'login'])->name('login');
 Route::post('/login', [AuthController::class, 'loginPost']);
@@ -31,6 +34,13 @@ Route::get('/tableau', [TableauController::class, 'index'])->name('tableau');
 Route::get('/solde', [SoldeController::class, 'index'])->name('solde');
 
 Route::get('/catalogue', [CatalogueController::class, 'index'])->name('catalogue');
+
+Route::get('/rapport', [RapportController::class, 'index'])->name('rapport');
+
+Route::get('/developpeur', [DeveloppeurController::class, 'index'])->name('developpeur');
+
+Route::get('/facture', [FactureController::class, 'index'])->name('facture');
+
 
 });
 
