@@ -18,34 +18,23 @@ Route::get('/register', [AuthController::class, 'register'])->name('register');
 Route::post('/register', [AuthController::class, 'registerPost']);
 
 Route::middleware('auth')->group(function () {
+
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
     Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
-Route::get('/prix', function () { 
-    return view('auth.prix'); })->name('prix');
-
-Route::get('/transactions', [TransactionController::class, 'index'])->name('transactions');
-
-Route::get('/client', [ClientController::class, 'index'])->name('client');
-
-
-Route::get('/tableau', [TableauController::class, 'index'])->name('tableau');
-
-Route::get('/solde', [SoldeController::class, 'index'])->name('solde');
-
-Route::get('/catalogue', [CatalogueController::class, 'index'])->name('catalogue');
-
-Route::get('/rapport', [RapportController::class, 'index'])->name('rapport');
-
-Route::get('/developpeur', [DeveloppeurController::class, 'index'])->name('developpeur');
-
-Route::get('/facture', [FactureController::class, 'index'])->name('facture');
-
-
+    Route::get('/prix', fn () => view('auth.prix'))->name('prix');
+    Route::get('/transactions', [TransactionController::class, 'index'])->name('transactions');
+    Route::get('/client', [ClientController::class, 'index'])->name('client');
+    Route::get('/tableau', [TableauController::class, 'index'])->name('tableau');
+    Route::get('/solde', [SoldeController::class, 'index'])->name('solde');
+    Route::get('/catalogue', [CatalogueController::class, 'index'])->name('catalogue');
+    Route::get('/rapport', [RapportController::class, 'index'])->name('rapport');
+    Route::get('/developpeur', [DeveloppeurController::class, 'index'])->name('developpeur');
+    Route::get('/facture', [FactureController::class, 'index'])->name('facture');
 
 });
 
 
-
-
-
+Route::fallback(function () {
+    abort(404);
+});
