@@ -277,7 +277,10 @@
                         <input type="text" placeholder="N° de taxe">
                     </div>
                 </div>
-                <div class="overlay-actions">
+                
+            </form>
+         </div>
+         <div class="overlay-actions">
                     <button type="button" class="btn-cancel" id="cancelOverlay">
                         Annuler
                     </button>
@@ -285,9 +288,8 @@
                         Ajouter client
                     </button>
                 </div>
-            </form>
-         </div>
     </div>
+    
 </div>
 
 @endsection

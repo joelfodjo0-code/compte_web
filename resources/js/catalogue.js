@@ -191,7 +191,6 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        // Prévisualisation de l'image
         const reader = new FileReader();
         reader.onload = (e) => {
             const mediaUploadZone = document.querySelector('#mediaUploadZone');

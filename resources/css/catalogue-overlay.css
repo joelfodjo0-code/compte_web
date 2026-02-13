@@ -238,9 +238,6 @@
 }
 
 
-
-
-/* Overlay "Ajouter un produit" */
 /* Overlay "Ajouter un produit" */
 .overlay-product {
     position: fixed;
@@ -299,7 +296,7 @@
 
 .overlay-product-body {
     padding: 24px 28px;
-    padding-bottom: 80px; /* Espace pour les boutons fixes */
+    padding-bottom: 80px; 
     overflow-y: auto;
     flex: 1;
 }

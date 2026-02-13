@@ -465,37 +465,37 @@
 
         <div class="overlay-content">
             <div class="column-row">
-                <input type="checkbox" class="column-check">
+                <input type="checkbox" class="column-check" checked>
                 <span class="column-name">Nom client</span>
                 <span class="drag-handle">⋮⋮⋮</span>
             </div>
 
             <div class="column-row">
-                <input type="checkbox" class="column-check">
+                <input type="checkbox" class="column-check" checked>
                 <span class="column-name">Nom produit</span>
                 <span class="drag-handle">⋮⋮⋮</span>
             </div>
 
             <div class="column-row">
-                <input type="checkbox" class="column-check">
+                <input type="checkbox" class="column-check" checked>
                 <span class="column-name">Prix</span>
                 <span class="drag-handle">⋮⋮⋮</span>
             </div>
 
             <div class="column-row">
-                <input type="checkbox" class="column-check">
+                <input type="checkbox" class="column-check" checked>
                 <span class="column-name">Date création</span>
                 <span class="drag-handle">⋮⋮⋮</span>
             </div>
 
             <div class="column-row">
-                <input type="checkbox" class="column-check">
+                <input type="checkbox" class="column-check" checked>
                 <span class="column-name">Date achat</span>
                 <span class="drag-handle">⋮⋮⋮</span>
             </div>
 
             <div class="column-row">
-                <input type="checkbox" class="column-check">
+                <input type="checkbox" class="column-check" checked>
                 <span class="column-name">Identifiant</span>
                 <span class="drag-handle">⋮⋮⋮</span>
             </div>

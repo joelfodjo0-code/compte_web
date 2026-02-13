@@ -42,6 +42,7 @@ Route::get('/developpeur', [DeveloppeurController::class, 'index'])->name('devel
 Route::get('/facture', [FactureController::class, 'index'])->name('facture');
 
 
+
 });
 
 
