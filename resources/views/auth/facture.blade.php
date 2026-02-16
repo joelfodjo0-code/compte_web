@@ -237,7 +237,7 @@
         <tr>
             <td><input type="checkbox"></td>
             <td class="user-cell">
-                <div class="avatar"> <img src="{{ asset('images/client1.jpg') }}" alt="Avatar Amadou Diallo"> 
+                <div class="avatar"> <img src="{{ asset('images/photo.jpg') }}" alt="Avatar Amadou Diallo"> 
                 </div>
                 <div class="user-info"> 
                     <strong>Amadou Diallo</strong>
@@ -257,7 +257,7 @@
         <tr>
             <td><input type="checkbox"></td>
             <td class="user-cell">
-                <div class="avatar"> <img src="{{ asset('images/client2.jpg') }}" alt="Avatar Fatou Traoré"> 
+                <div class="avatar"> <img src="{{ asset('images/photo.jpg') }}" alt="Avatar Fatou Traoré"> 
                 </div>
                 <div class="user-info"> 
                     <strong>Fatou Traoré</strong>
@@ -277,7 +277,7 @@
         <tr>
             <td><input type="checkbox"></td>
             <td class="user-cell">
-                <div class="avatar"> <img src="{{ asset('images/client3.jpg') }}" alt="Avatar Moussa Keita"> 
+                <div class="avatar"> <img src="{{ asset('images/photo.jpg') }}" alt="Avatar Moussa Keita"> 
                 </div>
                 <div class="user-info"> 
                     <strong>Moussa Keita</strong> 
@@ -297,7 +297,7 @@
         <tr>
             <td><input type="checkbox"></td>
             <td class="user-cell">
-                <div class="avatar"> <img src="{{ asset('images/client1.jpg') }}" alt="Avatar David Malan"> 
+                <div class="avatar"> <img src="{{ asset('images/photo.jpg') }}" alt="Avatar David Malan"> 
                 </div>
                 <div class="user-info"> 
                     <strong>David Malan</strong>  

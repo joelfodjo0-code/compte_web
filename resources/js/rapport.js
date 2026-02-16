@@ -87,15 +87,13 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                 },
                 y: {
-                    min: 100,
+                    min: 0,
                     max: 2000,
                     ticks: {
                         stepSize: 500,
-                        callback: value => value + ' K',
+                        callback: v => v,
                         color: '#6b7280',
-                        font: {
-                            size: 11
-                        }
+                        font: { size: 11 }
                     },
                     grid: {
                         color: '#e5e7eb',
@@ -104,11 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             },
             layout: {
-                padding: {
-                    bottom: 10,
-                    left: 10,
-                    right: 10
-                }
+                padding: { bottom: 10, left: 10, right: 10 }
             }
         }
     });

@@ -242,7 +242,7 @@
 
     <td class="user-cell">
         <div class="avatar">
-            <img src="{{ asset('images/client1.jpg') }}">
+            <img src="{{ asset('images/photo.jpg') }}">
         </div>
         <div class="user-info">
             <strong>Herry Kane</strong>
@@ -267,7 +267,7 @@
 
     <td class="user-cell">
         <div class="avatar">
-            <img src="{{ asset('images/client2.jpg') }}">
+            <img src="{{ asset('images/photo.jpg') }}">
         </div>
         <div class="user-info">
             <strong>Herry Books</strong>
@@ -292,7 +292,7 @@
 
     <td class="user-cell">
         <div class="avatar">
-            <img src="{{ asset('images/client3.jpg') }}">
+            <img src="{{ asset('images/photo.jpg') }}">
         </div>
         <div class="user-info">
             <strong>Matt Henry</strong>

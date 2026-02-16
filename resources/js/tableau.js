@@ -2,14 +2,26 @@ new Chart(document.getElementById('revenueChart'), {
     type: 'line',
     data: {
         labels: ['Jan','Fév','Mar','Avr','Mai','Jun','Jul','Aoû','Sep','Oct','Nov','Déc'],
-        datasets: [{
-            data: [2000,3000,4000,5000,6000,7000,8000,6000,5000,7000,5000,6000],
-            borderColor: '#8b5cf6',
-            borderWidth: 2,
-            tension: 0.4,
-            fill: false,
-            pointRadius: 0
-        }]
+        datasets: [
+            {
+
+                data: [200,2225,7825,500,6000,3000,800,6000,5000,7000],
+                borderColor: '#8b5cf6',
+                borderWidth: 2,
+                tension: 0.4,
+                fill: false,
+                pointRadius: 0
+            },
+            {
+                data: [null,null,null,null,null,null,null,null,null,7000,5000,6000],
+                borderColor: '#8b5cf6',
+                borderWidth: 2,
+                tension: 0.4,
+                fill: false,
+                pointRadius: 0,
+                borderDash: [6,6]
+            }
+        ]
     },
     options: { 
         responsive: true,
@@ -18,7 +30,9 @@ new Chart(document.getElementById('revenueChart'), {
         scales: {
             y: { 
                 beginAtZero: true,
+                max: 10000,        
                 ticks: {
+                    stepSize: 2000, 
                     callback: function(value) {
                         return value >= 1000 ? (value/1000) + 'k' : value;
                     }
@@ -28,6 +42,8 @@ new Chart(document.getElementById('revenueChart'), {
         }
     }
 });
+
+
 
 new Chart(document.getElementById('netRevenueChart'), {
     type: 'doughnut',
