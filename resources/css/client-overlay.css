@@ -1,0 +1,161 @@
+.client-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: none;
+}
+
+.client-overlay.active {
+    display: block;
+}
+
+.overlay-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.35);
+}
+.overlay-panel {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    bottom: 20px;
+    width: 630px;
+    max-width: calc(100% - 40px);
+    background: #EAEDF2;
+    border-radius: 14px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.overlay-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px; 
+    padding: 0; 
+}
+
+.overlay-header h3 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+    color: #111;
+}
+
+.overlay-close {
+    background: none;
+    border: none;
+    font-size: 26px;
+    cursor: pointer;
+    color: #666;
+}
+
+.overlay-card {
+    background: #fff;
+    border-radius: 14px;
+    flex: 1; 
+    padding: 24px 28px;
+    overflow: auto;
+}
+
+.overlay-body {
+    padding: 24px 28px;
+    overflow-y: auto;
+    flex: 1;
+}
+
+h4 {
+    margin: 20px 0 15px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #111;
+    padding-bottom: 12px; 
+    border-bottom: 1px solid #e5e5e5; 
+}
+
+.form-row {
+    display: flex;
+    gap: 16px;
+}
+
+.form-group {
+    flex: 1;
+    margin-bottom: 14px;
+}
+
+.form-group label {
+    font-size: 13px;
+    display: block;
+    margin-bottom: 6px;
+    color: #444;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+}
+
+textarea {
+    resize: none;
+    height: 70px;
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    gap: 8px; 
+    margin-bottom: 18px;
+}
+
+.checkbox input[type="checkbox"] {
+    width: auto;
+    margin: 0;
+}
+
+.checkbox label {
+    margin-bottom: 0;  
+    white-space: nowrap;  
+}
+
+.overlay-actions {
+    display: flex;
+    justify-content: space-between; 
+    gap: 12px; 
+    background: white;
+    padding: 16px 24px;
+    flex-shrink: 0;
+    border-radius: 14px;
+    transition: transform 0.1s ease, box-shadow 0.2s ease;
+}
+
+.btn-cancel {
+    border-radius: 8px;
+    background: #f1f1f1;
+    border: none;
+    cursor: pointer;
+    flex: 1; 
+    height: 40px;
+    font-size: 14px;
+}
+
+.btn-submit {
+    border-radius: 8px;
+    background: #2f4fde;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    flex: 1; 
+    height: 40px;
+    font-size: 14px;
+}
+
+.overlay-actions button:hover {
+    transform: translateY(-2px); 
+    box-shadow: 0 4px 12px rgba(28, 54, 97, 0.4); 
+}

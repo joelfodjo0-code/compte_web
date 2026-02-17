@@ -1,0 +1,167 @@
+.facture-container {
+    padding: 24px;
+}
+
+.facture-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 280px);
+    gap: 24px;
+    margin-bottom: 20px;
+}
+
+.stat-card {
+    height: 126px;
+    background: #fff;
+    border-radius: 10px;
+    padding: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.stat-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.stat-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.stat-title {
+    font-size: 13px;
+    color: #6b7280;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.stat-card h3 {
+    margin: 8px 0 4px 0;
+    font-size: 24px;
+    font-weight: 600;
+    color: #111827;
+    line-height: 1;
+}
+
+.stat-positive {
+    color: #37B793;
+    font-weight: 500;
+}
+
+.stat-negative {
+    color: #DE2C41;
+    font-weight: 500;
+}
+
+.stat-percentage {
+    font-size: 12px;
+    color: #6b7280;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.stat-icon {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+}
+
+.stat-graph {
+    width: 80px;
+    height: 50px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    margin-bottom: 0px;
+}
+
+.stat-graph canvas {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.catalogue-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    padding: 0;
+}
+
+.catalogue-actions .left {
+    display: flex;
+    gap: 8px;
+}
+
+.catalogue-actions .right {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.select-btn {
+    padding: 8px 12px;
+    font-size: 14px;
+    border-radius: 6px;
+    border: 1px solid #e5e7eb;
+    background: #fff;
+    cursor: pointer;
+    color: #374151;
+    width: auto;
+    min-width: fit-content;
+    white-space: nowrap;
+}
+.select-btn option {
+    padding: 8px;
+}
+
+.select-btn:hover {
+    border-color: #d1d5db;
+    background: #f9fafb;
+}
+
+.icon-text {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 12px;
+    font-size: 14px;
+}
+
+.facture-table-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 16px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.facture-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.facture-table th,
+.facture-table td {
+    padding: 10px;
+    border-bottom: 1px solid #e5e7eb;
+    font-size: 14px;
+}
+
+.facture-pagination {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 14px;
+}
+
+.pagination button {
+    margin-left: 4px;
+}
+
+
+
+
